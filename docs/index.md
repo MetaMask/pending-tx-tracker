@@ -32,19 +32,19 @@ As well as continues broadcast while in the pending state
 
 -   `config`  {object} - non optional configuration object consists of:
     -   `config.provider` **[Object][15]** A network provider.
-    -   `config.nonceTracker` **[Object][15]** see nonce tracker
-    -   `config.getPendingTransactions` **[function][16]** a function for getting an array of transactions,
-    -   `config.publishTransaction` **[function][16]** a async function for publishing raw transactions,
+    -   `config.nonceTracker` **[Object][15]** see [nonce-tracker][16]
+    -   `config.getPendingTransactions` **[function][17]** a function for getting an array of transactions,
+    -   `config.publishTransaction` **[function][17]** a async function for publishing raw transactions,
 
 ### updatePendingTxs
 
-[index.js:38-49][17]
+[index.js:38-49][18]
 
 checks the network for signed txs and releases the nonce global lock if it is
 
 ### resubmitPendingTxs
 
-[index.js:56-90][18]
+[index.js:56-90][19]
 
 Will resubmit any transactions who have not been confirmed in a block
 
@@ -55,7 +55,7 @@ Will resubmit any transactions who have not been confirmed in a block
 
 ### \_resubmitTx
 
-[index.js:99-121][19]
+[index.js:99-121][20]
 
 resubmits the individual txMeta used in resubmitPendingTxs
 
@@ -68,7 +68,7 @@ Returns **any** txHash {string}
 
 ### \_checkPendingTx
 
-[index.js:130-188][20]
+[index.js:130-188][21]
 
 Ask the network for the transaction to see if it has been include in a block
 
@@ -78,7 +78,7 @@ Ask the network for the transaction to see if it has been include in a block
 
 ### \_checkIftxWasDropped
 
-[index.js:196-204][21]
+[index.js:196-204][22]
 
 checks to see if if the tx's nonce has been used by another transaction
 
@@ -86,11 +86,11 @@ checks to see if if the tx's nonce has been used by another transaction
 
 -   `txMeta`  {Object} - txMeta object
 
-Returns **[boolean][22]** 
+Returns **[boolean][23]** 
 
 ### \_checkIfNonceIsTaken
 
-[index.js:213-220][23]
+[index.js:213-220][24]
 
 checks to see if a confirmed txMeta has the same nonce
 
@@ -98,7 +98,7 @@ checks to see if a confirmed txMeta has the same nonce
 
 -   `txMeta`  {Object} - txMeta object
 
-Returns **[boolean][22]** 
+Returns **[boolean][23]** 
 
 [1]: #pendingtransactiontracker
 
@@ -126,22 +126,24 @@ Returns **[boolean][22]**
 
 [13]: #parameters-5
 
-[14]: https://github.com/MetaMask/pending-tx-tracker/blob/9538835d705327bef85f5c34ada811ab2d45569a/index.js#L22-L221 "Source code on GitHub"
+[14]: https://github.com/MetaMask/pending-tx-tracker/blob/79edea16ef70a8c27792bb22d39561a18ecd3264/index.js#L22-L221 "Source code on GitHub"
 
 [15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
 
-[16]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
+[16]: https://github.com/MetaMask/nonce-tracker
 
-[17]: https://github.com/MetaMask/pending-tx-tracker/blob/9538835d705327bef85f5c34ada811ab2d45569a/index.js#L38-L49 "Source code on GitHub"
+[17]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
 
-[18]: https://github.com/MetaMask/pending-tx-tracker/blob/9538835d705327bef85f5c34ada811ab2d45569a/index.js#L56-L90 "Source code on GitHub"
+[18]: https://github.com/MetaMask/pending-tx-tracker/blob/79edea16ef70a8c27792bb22d39561a18ecd3264/index.js#L38-L49 "Source code on GitHub"
 
-[19]: https://github.com/MetaMask/pending-tx-tracker/blob/9538835d705327bef85f5c34ada811ab2d45569a/index.js#L99-L121 "Source code on GitHub"
+[19]: https://github.com/MetaMask/pending-tx-tracker/blob/79edea16ef70a8c27792bb22d39561a18ecd3264/index.js#L56-L90 "Source code on GitHub"
 
-[20]: https://github.com/MetaMask/pending-tx-tracker/blob/9538835d705327bef85f5c34ada811ab2d45569a/index.js#L130-L188 "Source code on GitHub"
+[20]: https://github.com/MetaMask/pending-tx-tracker/blob/79edea16ef70a8c27792bb22d39561a18ecd3264/index.js#L99-L121 "Source code on GitHub"
 
-[21]: https://github.com/MetaMask/pending-tx-tracker/blob/9538835d705327bef85f5c34ada811ab2d45569a/index.js#L196-L204 "Source code on GitHub"
+[21]: https://github.com/MetaMask/pending-tx-tracker/blob/79edea16ef70a8c27792bb22d39561a18ecd3264/index.js#L130-L188 "Source code on GitHub"
 
-[22]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[22]: https://github.com/MetaMask/pending-tx-tracker/blob/79edea16ef70a8c27792bb22d39561a18ecd3264/index.js#L196-L204 "Source code on GitHub"
 
-[23]: https://github.com/MetaMask/pending-tx-tracker/blob/9538835d705327bef85f5c34ada811ab2d45569a/index.js#L213-L220 "Source code on GitHub"
+[23]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+[24]: https://github.com/MetaMask/pending-tx-tracker/blob/79edea16ef70a8c27792bb22d39561a18ecd3264/index.js#L213-L220 "Source code on GitHub"

@@ -11,7 +11,7 @@ const EthQuery = require('ethjs-query')
 <br>
 @param config {object} - non optional configuration object consists of:
     @param {Object} config.provider - A network provider.
-    @param {Object} config.nonceTracker see nonce tracker
+    @param {Object} config.nonceTracker see [nonce-tracker](https://github.com/MetaMask/nonce-tracker)
     @param {function} config.getPendingTransactions a function for getting an array of transactions,
     @param {function} config.publishTransaction a async function for publishing raw transactions,
 
