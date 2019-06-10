@@ -1,0 +1,30 @@
+{
+  "name": "pending-tx-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha ./tests/pending-tx-test"
+  },
+  "keywords": [
+    "ethereum",
+    "metamask"
+  ],
+  "author": "frankiebee",
+  "license": "ISC",
+  "dependencies": {
+    "ethjs-query": "^0.3.8",
+    "loglevel": "^1.6.2",
+    "safe-event-emitter": "^1.0.1"
+  },
+  "devDependencies": {
+    "eth-json-rpc-middleware": "^2.6.1",
+    "ganache-core": "^2.5.5",
+    "json-rpc-engine": "^5.0.0",
+    "mocha": "^6.1.4",
+    "sinon": "^7.3.2"
+  }
+}
