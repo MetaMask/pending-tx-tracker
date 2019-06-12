@@ -9,6 +9,10 @@
   "scripts": {
     "test": "mocha ./tests/pending-tx-test"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/MetaMask/tx-gas-utils.git"
+  },
   "keywords": [
     "ethereum",
     "metamask"
